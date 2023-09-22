@@ -1,0 +1,442 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(239, 242, 255);
+  background-image: url(background_img.jpg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  height: 92%;
+  width: 100%;
+  background-color: #ffffff;
+  border: 1px solid #000;
+  margin: 2rem;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.left,
+.right {
+  border: 1px solid #000;
+  border-radius: 5px;
+  display: block;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  z-index: 1;
+  transition: opacity 2s ease-in-out;
+}
+.right {
+  opacity: 0;
+}
+.left {
+  opacity: 1;
+}
+.left_first,
+.right_first {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 2rem;
+}
+
+.left_first .left_first_img,
+.right_first .right_first_img {
+  height: 2rem;
+  width: 2rem;
+  margin: 0.5rem;
+}
+
+.left_first span,
+.right_first span {
+  font-size: 1.2rem;
+  color: rgb(0, 0, 128);
+}
+
+/* Your CSS Styles */
+.left_second {
+  width: 100%;
+  /* border: 1px solid black; */
+  margin-top: 2rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+.right_second {
+  width: 100%;
+  /* border: 1px solid black; */
+  margin-top: 2rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+.left_second h2,
+.right_second h2 {
+  width: 100%;
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  color: #01138f;
+}
+
+.left_second .login_p,
+.right_second .register_p {
+  width: 100%;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.social_net {
+  width: 100%;
+  height: 4rem;
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.social_net a {
+  text-decoration: none;
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+}
+
+.social_net img {
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 50%;
+  scale: 0.9;
+}
+
+.left_second span,
+.right_second span {
+  width: 100%;
+  margin-bottom: 1rem;
+  /* border: 1px solid black; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+/* Your existing CSS */
+.left_second span::before,
+.left_second span::after,
+.right_second span::before,
+.right_second span::after {
+  content: "";
+  height: 0.1rem;
+  width: 50%;
+  margin: 1rem;
+  background-color: rgb(90, 90, 90);
+  display: inline-block; /* Make the lines inline with the text */
+}
+
+/* Your existing CSS */
+form {
+  width: 80%;
+  height: 24rem;
+  /* border: 1px solid black; */
+  margin: 0 auto; /* Center the form horizontally */
+}
+
+.input_field {
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border: 1px solid rgb(0, 0, 0);
+  margin-bottom: 1.5rem;
+  background-color: #f0ffff;
+  border-radius: 2rem;
+}
+
+/* .input_field label {
+  margin: 1rem;
+  font-size: 1.2rem;
+  width: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+} */
+/* Your existing CSS */
+
+.input_field input {
+  font-size: 1rem;
+  margin-left: 1rem;
+  outline: none;
+  border: none;
+  padding: 1px;
+  height: 100%;
+  width: 100%;
+  background: transparent;
+}
+
+.input_field img {
+  position: relative;
+  height: 2rem;
+  margin: 1rem;
+  cursor: pointer;
+}
+
+.more_opt {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  gap: 1.5rem;
+}
+
+.remember,
+.forget {
+  width: 100%;
+  height: 3rem;
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0ffff;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 2rem;
+  padding: 1rem;
+}
+
+.more_opt .remember input[type="checkbox"] {
+  accent-color: rgb(0, 0, 127);
+  scale: 1.5;
+}
+
+.more_opt .forget a {
+  text-decoration: none;
+  color: #01138f;
+  font-size: 1.3rem;
+}
+/* Your existing CSS */
+
+.more_opt .forget a::after {
+  content: "";
+  display: block;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0.1rem;
+  background-color: #01138f;
+  transition: all 0.5s ease;
+}
+
+.more_opt .forget a:hover::after {
+  width: 100%;
+}
+
+.left_second form button,
+.right_second form button {
+  width: 50%;
+  height: 3rem;
+  cursor: pointer;
+  border-radius: 2rem;
+  border: 1px solid #000e66;
+  outline: none;
+  font-size: 1.5rem;
+  color: #fff;
+  background-color: #006dff;
+  margin-bottom: 1.5rem;
+}
+
+.sign_up,
+.sign_in {
+  width: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  /* border: 1px solid black; */
+}
+
+.sign_p {
+  font-size: 1.2rem;
+}
+
+.sign_a {
+  text-decoration: none;
+  color: #000e66;
+  font-size: 1.2rem;
+}
+
+.sign_a::after {
+  content: "";
+  display: block;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0.1rem;
+  background-color: #01138f;
+  transition: all 0.5s ease;
+}
+
+.sign_a:hover::after {
+  width: 100%;
+}
+
+.container .left_panel {
+  position: absolute;
+  border: 1px solid black;
+  height: 85%;
+  width: 46.3%;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #61a5ff;
+  padding-top: 5rem;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+  pointer-events: none;
+  border-radius: 5px;
+}
+
+.container .right_panel {
+  position: absolute;
+  border: 1px solid black;
+  height: 85%;
+  width: 46.3%;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #61a5ff;
+  padding-top: 4rem;
+  right: 4rem;
+  z-index: 10;
+  opacity: 1;
+  transition: opacity 2s ease-in-out;
+  pointer-events: all;
+  border-radius: 5px;
+}
+
+.container .right_panel .content h3,
+.container .left_panel .content h3 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.container .right_panel .content p,
+.container .left_panel .content p {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.container .right_panel .content button,
+.container .left_panel .content button {
+  width: 10rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  font-weight: 400;
+  color: white;
+  background-color: #01138f;
+  margin-bottom: 3rem;
+}
+.container .right_panel .content button {
+  margin-bottom: 0rem;
+}
+
+@media screen and (max-width: 1300px) {
+  .container {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+  .container .left_panel,
+  .container .right_panel {
+    display: none;
+    height: 86.5% !important;
+  }
+  .right {
+    display: none;
+  }
+  .left {
+    display: block;
+  }
+  .sign_in,
+  .sign_up {
+    display: flex;
+  }
+}
+@media screen and (max-width: 684px) {
+  .more_opt {
+    display: block;
+    width: 100%;
+  }
+  .remember,
+  .forget {
+    margin-bottom: 1.5rem;
+  }
+  .left_second h2,
+  .right_second h2 {
+    font-size: 2rem;
+  }
+
+  .left_second,
+  .right_second {
+    margin-top: 3rem;
+    padding: 0;
+  }
+
+  .left_first,
+  .right_first {
+    margin-top: 1rem;
+  }
+
+  .left_second .login_p,
+  .right_second .register_p {
+    font-size: 1rem;
+  }
+  .left,
+  .right {
+    padding: 0;
+    margin: 0;
+  }
+  .container {
+    padding: 0;
+    height: 100%;
+    margin: 0;
+  }
+  .left_first .left_first_img,
+  .right_first .right_first_img {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+  .left_first span,
+  .right_first span {
+    font-size: 1.2rem;
+  }
+}

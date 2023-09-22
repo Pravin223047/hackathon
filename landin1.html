@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="left_panel" id="left_panel">
+        <div class="content">
+          <h3>New to Website?</h3>
+          <p>Click here to Login...</p>
+          <button class="btn btn1" id="sign-in-btn">Sign In</button>
+        </div>
+        <img src="login.png" class="left_panel_img" alt="" />
+      </div>
+      <div class="left" id="left">
+        <div class="left_first">
+          <img src="hydrovision.jpg" class="left_first_img" alt="Error" />
+          <span>HydroVision</span>
+        </div>
+        <div class="left_second">
+          <h2>Login to Your Account</h2>
+          <p class="login_p">Login using social networks</p>
+          <div class="social_net">
+            <a href=""><img src="facebook.png" alt="Error" /></a>
+            <a href=""><img src="google.png" alt="Error" /></a>
+            <a href=""><img src="twitter.png" alt="Error" /></a>
+          </div>
+          <span>Or</span>
+          <form action="">
+            <div class="input_field">
+              <img src="gmail.png" alt="" />
+              <input
+                type="email"
+                placeholder="Email"
+                name="lemail"
+                id="lemail"
+                required
+                autocomplete="off"
+                autocorrect="off"
+              />
+            </div>
+            <div class="input_field">
+              <img src="reset-password.png" alt="" />
+              <input
+                type="password"
+                placeholder="Password"
+                name="lpassword"
+                id="lpassword"
+                required
+                autocomplete="off"
+                autocorrect="off"
+              />
+              <img src="eye.png" alt="pass" />
+            </div>
+            <div class="more_opt">
+              <div class="remember">
+                <input type="checkbox" name="checkbox" id="checkbox" />
+                <label for="checkbox">Remember Me</label>
+              </div>
+              <div class="forget">
+                <a href="#" name="click" id="click">Forget Password?</a>
+              </div>
+            </div>
+            <button id="Login">Login</button>
+            <div class="sign_up">
+              <p class="sign_p">New to website?</p>
+              <a href="#Login_page" class="sign_a" id="Register_page"
+                >Register Here</a
+              >
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="right_panel" id="right_panel">
+        <div class="content">
+          <h3>Want To Buy Product?</h3>
+          <p>Click here to Register...</p>
+          <button class="btn btn1" id="sign-up-btn">Sign up</button>
+        </div>
+        <img src="register.png" class="right_panel_img" alt="" />
+      </div>
+      <div class="right" id="right">
+        <div class="right_first">
+          <img src="hydrovision.jpg" class="right_first_img" alt="Error" />
+          <span>HydroVision</span>
+        </div>
+        <div class="right_second">
+          <h2>Create Account</h2>
+          <p class="register_p">Register using social networks</p>
+          <div class="social_net">
+            <a href=""><img src="facebook.png" alt="Error" /></a>
+            <a href=""><img src="google.png" alt="Error" /></a>
+            <a href=""><img src="twitter.png" alt="Error" /></a>
+          </div>
+          <span>Or</span>
+          <form action="">
+            <div class="input_field">
+              <img src="admin.png" alt="" />
+              <input
+                type="name"
+                placeholder="Name"
+                name="name"
+                id="name"
+                required
+                autocomplete="off"
+                autocorrect="off"
+              />
+            </div>
+            <div class="input_field">
+              <img src="gmail.png" alt="" />
+              <input
+                type="email"
+                placeholder="Email"
+                name="email"
+                id="email"
+                required
+                autocomplete="off"
+                autocorrect="off"
+              />
+            </div>
+            <div class="input_field">
+              <img src="reset-password.png" alt="" />
+              <input
+                type="password"
+                placeholder="Password"
+                name="password"
+                id="password"
+                required
+                autocomplete="off"
+                autocorrect="off"
+              />
+              <img src="eye.png" alt="pass" />
+            </div>
+            <div class="input_field">
+              <img src="reset-password.png" alt="" />
+              <input
+                type="password"
+                placeholder="Confirm Password"
+                name="cpassword"
+                id="cpassword"
+                required
+                autocomplete="off"
+                autocorrect="off"
+              />
+              <img src="eye.png" alt="cpass" />
+            </div>
+            <button id="Register">Register</button>
+            <div class="sign_in">
+              <p class="sign_p">Already Registered?</p>
+              <a href="#Regider_page" class="sign_a" id="Login_page"
+                >Login Here</a
+              >
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script>
+      const sign_in_btn = document.querySelector("#sign-in-btn");
+      const sign_up_btn = document.querySelector("#sign-up-btn");
+      const left = document.querySelector("#left");
+      const right = document.querySelector("#right");
+      const left_panel = document.querySelector("#left_panel");
+      const right_panel = document.querySelector("#right_panel");
+      const Login_page = document.querySelector("#Login_page");
+      const Register_page = document.querySelector("#Register_page");
+
+      sign_up_btn.addEventListener("click", () => {
+        right_panel.style.opacity = 0;
+        left_panel.style.opacity = 1;
+        right.style.opacity = 1;
+        left.style.opacity = 0;
+        left_panel.style.pointerEvents = "all";
+        right_panel.style.pointerEvents = "none"; // Use a string value
+      });
+
+      sign_in_btn.addEventListener("click", () => {
+        right_panel.style.opacity = 1;
+        left_panel.style.opacity = 0;
+        right.style.opacity = 0;
+        left.style.opacity = 1;
+        left_panel.style.pointerEvents = "none";
+        right_panel.style.pointerEvents = "all"; // Use a string value
+      });
+
+      Register_page.addEventListener("click", () => {
+        left.style.display = "none";
+        right.style.display = "block";
+        right.style.opacity = 1;
+        left.style.opacity = 0;
+      });
+      Login_page.addEventListener("click", () => {
+        left.style.display = "block";
+        right.style.display = "none";
+        right.style.opacity = 0;
+        left.style.opacity = 1;
+      });
+    </script>
+  </body>
+</html>
